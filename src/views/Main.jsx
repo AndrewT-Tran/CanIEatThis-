@@ -23,9 +23,6 @@ const Main = () => {
 		}
 	}, [darkMode]);
 
-	const toggleDarkMode = () => {
-		setDarkMode(!darkMode);
-	};
 
 	return (
 		<div>
@@ -39,10 +36,6 @@ const Main = () => {
 					</ul>
 				</div>
 			)}
-
-			<button className="btn-md glass accent" onClick={toggleDarkMode}>
-				{darkMode ? "Light Mode" : "Dark Mode"}
-			</button>
 
 			<Routes>
 				<Route path="/" element={<Search />} />

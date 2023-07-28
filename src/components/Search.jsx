@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Yes from "../views/Yes";
 import No from "../views/No";
-import NutritionTable from "../views/NutritionTable";
 
 const Search = () => {
 	const [query, setQuery] = useState("");
@@ -64,7 +63,7 @@ const Search = () => {
 				</div>
 				<div className=" mx-auto my-10">
 					{results ? (
-						results.totalNutrients.SUGAR.quantity > 20 ? (
+						results.totalNutrients.SUGAR.quantity > 17 || results.totalNutrients.CHOCDF.quantity > 20 ? (
 							<No
 								sugars={results.totalNutrients.SUGAR.quantity}
 								calories={results.calories}
