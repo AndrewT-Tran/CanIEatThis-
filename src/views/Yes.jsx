@@ -36,7 +36,7 @@ const Yes = ({ sugars, query, carbs, calories }) => {
 							</h3>
 
 							<p className="text-center text-xl emphasis">
-								Diabetics fact goes here ,
+
 								<span className="font-semibold uppercase text-primary-focus">
 									{" "}
 									{query}{" "}

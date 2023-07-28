@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import NutritionTable from "./NutritionTable";
 
 const No = ({ sugars, query, carbs, calories, submitClick }) => {
+		function handleClick() {
+		window.location.href = "/";
+	}
 	const [showDetails, setShowDetails] = useState(false); // new state variable
 	const [results, setResults] = useState(null); // new state variable
 
@@ -22,10 +25,10 @@ const No = ({ sugars, query, carbs, calories, submitClick }) => {
 			<div className="animate__animated animate__backInRight">
 				<div className="w-full mx-auto text-deanger opacity-50 m-2">
 					<div className="card w-96 bg-danger selection:bg-opacity-30">
-						<div className="card-body">
+						<div className="card-body bg-red-500">
 							<h2 className="card-title font-light text-center font-sans text-2xl text-red-200">
 								<span className="text-3xl text-center font-semibold text-red-950">
-									Nah!
+									Nah!s
 								</span>{" "}
 								you should think twice!
 							</h2>
@@ -36,7 +39,7 @@ const No = ({ sugars, query, carbs, calories, submitClick }) => {
 							<div className="card-actions justify-end">
 								<button
 									onClick={submitClick}
-									className="text-white btn glass bg-emerald-900 bg-opacity-70 font-light "
+									className="text-white btn glass bg-red-900 bg-opacity-70 font-light "
 								>
 									Search Again
 								</button>
@@ -45,7 +48,7 @@ const No = ({ sugars, query, carbs, calories, submitClick }) => {
 										setShowDetails(true);
 										fetchNutritionData();
 									}}
-									className="text-white btn glass bg-emerald-900 bg-opacity-70 font-light ml-2"
+									className="text-white btn glass bg-red-900 bg-opacity-70 font-light ml-2"
 								>
 									Show Details
 								</button>

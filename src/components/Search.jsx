@@ -22,11 +22,11 @@ const Search = () => {
 	};
 
 	useEffect(() => {
-const onChange = (event) => {
-	if (event.target) {
-		setQuery(event.target.value);
-	}
-};
+		const onChange = (event) => {
+			if (event.target) {
+				setQuery(event.target.value);
+			}
+		};
 		const delayDebounceFn = setTimeout(() => {
 			onChange(query);
 		}, 1000);
@@ -80,7 +80,18 @@ const onChange = (event) => {
 							/>
 						)
 					) : null}
-					{results ? <NutritionTable results={results} /> : null}
+					{/* {results ? <NutritionTable results={results} /> : null} */}
+				</div>
+				<div className="text-md text-center mx-auto w-1/4 ">
+					Most adults with diabetes aim for{" "}
+					<span className="text-primary font-bold">45-60 grams </span> of carbs
+					per meal and
+					<span className="text-secondary font-bold">
+						15-20 grams per snack.
+					</span>
+					That number may go up or down, depending on how active you are and the
+					medicines you take, so check with your doctor or a registered
+					dietitian.{" "}
 				</div>
 			</div>
 		</>

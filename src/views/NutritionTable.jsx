@@ -50,7 +50,7 @@ const NutritionTable = ({ results }) => {
 			<tbody className="text-xl font-lighttext-secondary-focus">
 				{nutrients.map((nutrient) => (
 					<tr key={nutrient.name}>
-						<thead className="text-2xl text-primary-focus">
+						<thead className="text-2xl text-black">
 							<td>{nutrient.name}</td>
 						</thead>
 						{nutrient.quantity !== undefined ? (
@@ -58,12 +58,12 @@ const NutritionTable = ({ results }) => {
 								<td className="text-neutral-300">
 									{nutrient.quantity.toFixed(2)}
 								</td>
-								<td className="text-secondary">{nutrient.unit}</td>
+								<td className="text-neutral-800">{nutrient.unit}</td>
 							</>
 						) : (
 							<>
 								<td className="text-neutral-300">NA</td>
-								<td className="text-secondary">NA</td>
+								<td className="text-neutral-800">NA</td>
 							</>
 						)}
 					</tr>

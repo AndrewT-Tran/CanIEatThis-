@@ -13,7 +13,7 @@ const Main = () => {
 	}, []);
 	return (
 		<div>
-			<h1 class="animate__animated animate__bounce">An animated element</h1>
+
 			{searchHistory.length > 0 && (
 				<div>
 					<h2>Search history:</h2>
@@ -24,10 +24,12 @@ const Main = () => {
 					</ul>
 				</div>
 			)}
+
 			<Routes>
 				<Route path="/" element={<Search />} />
-				<Route path="/nutrition/:id" element={<NutritionTable />} />
+				<Route path="/nutritison/:id" element={<NutritionTable />} />
 			</Routes>
+
 		</div>
 	);
 };
