@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
+import '../App.css';
 import axios from "axios";
 import Yes from "../views/Yes";
 import No from "../views/No";
@@ -56,10 +57,10 @@ const Search = () => {
 							value={query}
 							onChange={(event) => setQuery(event.target.value)}
 						/>
-						<button type="submit" className="btn btn-active">
+						<button type="submit" className="btn bth-md btn-aqua glass">
 							Submit
 						</button>
-					</form>
+					</form>z
 				</div>
 				<div className=" mx-auto my-10">
 					{results ? (
