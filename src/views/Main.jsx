@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 
 const Main = () => {
 	const [searchHistory, setSearchHistory] = useState([]);
-	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
 		const history = localStorage.getItem("searchHistory");
@@ -14,14 +13,6 @@ const Main = () => {
 		}
 	}, []);
 
-	useEffect(() => {
-		const body = document.querySelector("body");
-		if (darkMode) {
-			body.classList.add("dark-mode");
-		} else {
-			body.classList.remove("dark-mode");
-		}
-	}, [darkMode]);
 
 
 	return (

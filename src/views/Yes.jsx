@@ -37,7 +37,7 @@ const Yes = ({ sugars, query, carbs, calories }) => {
 
 							<p className="text-center text-xl emphasis">
 
-								<span className="font-semibold uppercase text-primary-focus">
+								<span className="font-semibold uppercase text-neutral-950">
 									{" "}
 									{query}{" "}
 								</span>{" "}
@@ -51,7 +51,8 @@ const Yes = ({ sugars, query, carbs, calories }) => {
 							<div className="card-actions justify-end">
 								<button
 									onClick={submitClick}
-									className="text-white btn glass bg-emerald-900 bg-opacity-70 font-light ">
+									className="text-white btn glass bg-danger bg-opacity-70 font-sans "
+								>
 									Search Again
 								</button>
 								<button
@@ -59,7 +60,8 @@ const Yes = ({ sugars, query, carbs, calories }) => {
 										setShowDetails(true);
 										fetchNutritionData();
 									}}
-									className="text-white btn glass bg-emerald-900 bg-opacity-70 font-light ml-2">
+									className="text-black btn glass bg-orange-300 bg-opacity-70 font-sans ml-2"
+								>
 									Show Details
 								</button>
 								{showDetails && results ? (

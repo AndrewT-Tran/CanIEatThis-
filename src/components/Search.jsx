@@ -36,13 +36,13 @@ const Search = () => {
 	return (
 		<>
 			<div className="flex justify-center items-center h-screen flex-col">
-				<header className="text-center row mb-8 font-sans">
+				<header className="text-center row mb-8 font-Poppins">
 					<h1 className="mb-4 text-3xl font-semibold font-sans text-gray-900 md:text-5xl lg:text-6xl">
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-primary-focus from-secondary">
 							Can I {}
 						</span>
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-accent from-primary-focus">
-							Eat This ?
+							Eat This ? {}
 						</span>
 					</h1>
 				</header>

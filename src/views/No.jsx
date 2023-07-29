@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import NutritionTable from "./NutritionTable";
+import React, { useState } from 'react';
+import NutritionTable from './NutritionTable';
 
 const No = ({ sugars, query, carbs, calories, submitClick }) => {
-		function handleClick() {
-		window.location.href = "/";
-	}
 	const [showDetails, setShowDetails] = useState(false); // new state variable
 	const [results, setResults] = useState(null); // new state variable
+	function submitClick() {
+		window.location.href = "/";
+	}
 
 	// function to fetch nutrition data
 	async function fetchNutritionData() {
@@ -23,23 +23,32 @@ const No = ({ sugars, query, carbs, calories, submitClick }) => {
 	if (sugars > 21 || carbs > 20) {
 		return (
 			<div className="animate__animated animate__backInRight">
-				<div className="w-full mx-auto text-deanger opacity-50 m-2">
-					<div className="card w-96 bg-danger selection:bg-opacity-30">
-						<div className="card-body bg-red-500">
-							<h2 className="card-title font-light text-center font-sans text-2xl text-red-200">
-								<span className="text-3xl text-center font-semibold text-red-950">
-									Nah!s
-								</span>{" "}
-								you should think twice!
+				<div className="w-full mx-auto m-2">
+					<div className="card w-96 bg-red-500 bg-opacity-50 text-black">
+						<div className="card-body">
+							<h2 className="card-title font-sans text-xl text-red-100">
+								<span className="text-3xl font-bold text-base-300-800">NO !</span>
+								based on the glucose and carbohydrate content you're good!
 							</h2>
 							<h3 className="text-center font-medium font-sans text-2xl uppercase">
-								Unfortunately, the food you searched for contains too much sugar
-								or carbs.
+								{query}
 							</h3>
+							<p className="text-center text-xl emphasis">
+								<span className="font-semibold uppercase text-yellow-100">
+									{" "}
+									{query}{" "}
+								</span>{" "}
+								has <span className="font-bold">{sugars.toFixed(2)} </span>
+								grams of sugar and{" "}
+								<span className="font-bold">
+									{calories.toFixed(0)} calories{" "}
+								</span>
+								which is less than the daily recommended value{" "}
+							</p>
 							<div className="card-actions justify-end">
 								<button
 									onClick={submitClick}
-									className="text-white btn glass bg-red-900 bg-opacity-70 font-light "
+									className="text-white btn glass bg-danger bg-opacity-70 font-sans "
 								>
 									Search Again
 								</button>
@@ -48,7 +57,7 @@ const No = ({ sugars, query, carbs, calories, submitClick }) => {
 										setShowDetails(true);
 										fetchNutritionData();
 									}}
-									className="text-white btn glass bg-red-900 bg-opacity-70 font-light ml-2"
+									className="text-black btn glass bg-warning bg-opacity-70 font-sans ml-2"
 								>
 									Show Details
 								</button>
@@ -61,16 +70,7 @@ const No = ({ sugars, query, carbs, calories, submitClick }) => {
 				</div>
 			</div>
 		);
-	} else {
-		return (
-			<NutritionTable
-				results={results}
-				showDetails={showDetails}
-				setShowDetails={setShowDetails}
-			/>
-		);
 	}
 };
 
 export default No;
-
