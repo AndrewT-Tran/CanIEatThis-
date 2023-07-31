@@ -41,7 +41,7 @@ const Search = () => {
 					<img src="https://i.ibb.co/Zmjj9gh/android-chrome-192x192.png" alt="logo" width="100" height="100" />
 				</div>
 				<header className="text-center row mt-4 mb-8 font-sans">
-					<h1 className="mb-3 text-3xl font-light md:text-5xl lg:text-6xl">
+					<h1 className="mb-3 mx-2 text-3xl font-light md:text-3xl lg:text-6xl">
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-primary-focus from-secondary">
 							Can I {}
 						</span>
@@ -60,9 +60,10 @@ const Search = () => {
 							value={query}
 							onChange={(event) => setQuery(event.target.value)}
 						/>
-						<button type="submit" className="btn mx-3 btn-sm bg-orange-600 glass">
+						<button type="submit" className="btn mx-3 my-2 btn-sm bg-orange-600 glass" style={{fontSize: '0.8rem'}}>
 							Submit
 						</button>
+
 					</form>
 				</div>
 				<div className=" mx-auto my-5">
@@ -85,7 +86,7 @@ const Search = () => {
 					) : null}
 					{/* {results ? <NutritionTable results={results} /> : null} */}
 				</div>
-				<div className="text-sm font-light text-justify mx-auto w-2/5 text-white opacity-70 ">
+				<div className="text-sm font-light text-justify mx-auto w-3/5 text-white opacity-70 p-4">
 					Most adults with diabetes aim for{" "}
 					<span className="text-primary font-bold">45-60 grams </span> of carbs
 					per meal and
@@ -97,6 +98,24 @@ const Search = () => {
 					dietitian.{" "}
 				</div>
 			</div>
+			<style jsx>{`
+				@media (max-width: 768px) {
+					/* Adjust font sizes for smaller screens */
+					.text-3xl {
+						font-size: 2rem;
+					}
+					.text-6xl {
+						font-size: 3rem;
+					}
+					.text-sm {
+						font-size: 0.8rem;
+					}
+					/* Adjust input width for smaller screens */
+					.w-80 {
+						width: 100%;
+					}
+				}
+			`}</style>
 		</>
 	);
 };
