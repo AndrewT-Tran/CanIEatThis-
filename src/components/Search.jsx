@@ -7,6 +7,7 @@ import No from "../views/No";
 const Search = () => {
 	const [query, setQuery] = useState("");
 	const [results, setResults] = useState(null);
+	const [error, setError] = useState(null);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -17,14 +18,24 @@ const Search = () => {
 			.get(
 				`https://api.edamam.com/api/nutrition-data?app_id=${app_id}&app_key=${app_key}&nutrition-type=${nutrition_type}&ingr=${query}`
 			)
-			.then((response) => setResults(response.data))
-			.catch((error) => console.error(error));
+			.then((response) => {
+				setResults(response.data);
+				setError(null);
+			})
+			.catch((error) => {
+				console.error(error);
+				setError("An error occurred. Please try again later.");
+			});
 	};
 
 	useEffect(() => {
 		const onChange = (event) => {
 			if (event.target) {
-				setQuery(event.target.value);
+				let value = event.target.value;
+				if (!value.includes("1")) {
+					value = "1" + value;
+				}
+				setQuery(value);
 			}
 		};
 		const delayDebounceFn = setTimeout(() => {
@@ -67,7 +78,9 @@ const Search = () => {
 					</form>
 				</div>
 				<div className=" mx-auto my-5">
-					{results ? (
+					{error ? (
+						<div className="text-red-500">{error}</div>
+					) : results ? (
 						results.totalNutrients.SUGAR.quantity > 17 || results.totalNutrients.CHOCDF.quantity > 20 ? (
 							<No
 								sugars={results.totalNutrients.SUGAR.quantity}

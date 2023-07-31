@@ -4,9 +4,6 @@ import NutritionTable from './NutritionTable';
 const No = ({ sugars, query, carbs, calories, submitClick }) => {
 	const [showDetails, setShowDetails] = useState(false); // new state variable
 	const [results, setResults] = useState(null); // new state variable
-	function submitClick() {
-		window.location.href = "/";
-	}
 
 	// function to fetch nutrition data
 	async function fetchNutritionData() {
@@ -20,53 +17,56 @@ const No = ({ sugars, query, carbs, calories, submitClick }) => {
 		setResults(data);
 	}
 
-	if (sugars > 21 || carbs > 20) {
+	if (sugars > 20 || carbs > 20) {
 		return (
-			<div className="animate__animated animate__backInRight">
-				<div className="w-full mx-auto">
-					<div className="card w-3/5 mx-auto bg-red-500 bg-opacity-50 text-black">
-						<div className="card-body">
-				
-								<h1 className="text-3xl text-center font-sans">
-									<span className="bg-red-200 text-red-950 px-1 mx-1">NO!</span>
-									{""}Maybe think about it
-								</h1>
-							<p className="text-center text-xl emphasis">
-								<span className="font-semibold uppercase text-yellow-100">
-									{" "}
-									{query}{" "}
-								</span>{" "}
-								has <span className="font-bold">{sugars.toFixed(2)} </span>
-								grams of sugar and{" "}
-								<span className="font-bold">
-									{carbs.toFixed(0)} g of carbohydrates{" "}
-								</span>
-								which is more than the daily recommended value{" "}
-							</p>
-							<div className="card-actions justify-end">
-								<button
-									onClick={submitClick}
-									className="text-white btn glass bg-danger bg-opacity-70 font-sans "
-								>
-									Search Again
-								</button>
-								<button
-									onClick={() => {
-										setShowDetails(true);
-										fetchNutritionData();
-									}}
-									className="text-black btn glass bg-warning bg-opacity-70 font-sans ml-2"
-								>
-									Show Details
-								</button>
-								{showDetails && results ? (
-									<NutritionTable results={results} />
-								) : null}
-							</div>
-						</div>
+			<>
+			<div className="w-full mx-auto m-2">
+			<div className="card w-96 md:w-1/2 bg-red-700 bg-opacity-50 text-white">
+				<div className="card-body">
+						<h1 className="text-3xl md:text-4xl text-center font-bold text-rose-400"
+						>NO!</h1>
+		
+					<h3 className="text-center font-sans text-xl md:text-2xl uppercase">
+						{query}
+					</h3>
+
+					<p className="text-center text-lg md:text-xl font-light emphasis">
+
+						<span className="font-semibold uppercase text-neutral-950">
+							{" "}
+							{query}{" "}
+						</span>{" "}
+						has <span className="font-bold">{sugars.toFixed(2)} </span>
+						grams of sugar and{" "}
+						<span className="font-bold">
+							{calories.toFixed(0)} calories{" "}
+						</span>
+						which is greater than the daily recommended value{" "}
+					</p>
+					<div className="card-actions justify-end">
+						<button
+							onClick={submitClick}
+							className="text-white btn glass bg-danger bg-opacity-70 font-sans text-sm md:text-base"
+						>
+							Search Again
+						</button>
+						<button
+							onClick={() => {
+								setShowDetails(true);
+								fetchNutritionData();
+							}}
+							className="text-black btn glass bg-orange-300 bg-opacity-70 font-sans ml-2 text-sm md:text-base"
+						>
+							Show Details
+						</button>
+						{showDetails && results ? (
+							<NutritionTable results={results} />
+						) : null}
 					</div>
 				</div>
 			</div>
+		</div>
+		</>
 		);
 	}
 };

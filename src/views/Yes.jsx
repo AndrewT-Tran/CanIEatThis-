@@ -24,31 +24,29 @@ const Yes = ({ sugars, query, carbs, calories }) => {
 	if (sugars < 20) {
 		return (
 			<>
-				<div className="w-full mx-auto m-2">
-					<div className="card w-96 bg-success bg-opacity-50 text-black">
+				<div className="w-full mx-auto p-4 m-2">
+					<div className="card w-96 md:w-1/2 bg-success bg-opacity-50 text-black">
 						<div className="card-body">
-							<h2 className="card-title font-sans text-xl text-green-100">
-								<span className="text-3xl font-bold text-green-800">YES!</span>
-								based on the glucouse and carbohydrate content you're good!
-							</h2>
-							<h3 className="text-center font-medium font-sans text-2xl uppercase">
-								{query}
-							</h3>
+							<h1 className="text-3xl text-center font-bold text-green-200">
+								Yes!
+							</h1>
 
-							<p className="text-center text-xl emphasis">
-
+							<p className="text-center font-sans text-xl emphasis">
 								<span className="font-semibold uppercase text-neutral-950">
 									{" "}
 									{query}{" "}
 								</span>{" "}
-								has <span className="font-bold">{sugars.toFixed(2)} </span>
-								grams of sugar and{" "}
+								has{" "}
+								<span className="font-bold">{sugars.toFixed(2)} </span>
+								grams of sugar,{" "}
+								<span className="font-bold">{carbs.toFixed(2)} </span>{" "}
+								grams of carbohydrates, and{" "}
 								<span className="font-bold">
 									{calories.toFixed(0)} calories{" "}
 								</span>
 								which is greater than the daily recommended value{" "}
 							</p>
-							<div className="card-actions justify-end">
+							<div className="card-actions justify-end p-5">
 								<button
 									onClick={submitClick}
 									className="text-white btn glass bg-danger bg-opacity-70 font-sans "
