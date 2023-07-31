@@ -37,8 +37,11 @@ const Search = () => {
 	return (
 		<>
 			<div className="flex justify-center items-center h-screen flex-col">
-				<header className="text-center row mb-8 font-Poppins">
-					<h1 className="mb-4 text-3xl font-semibold font-sans text-gray-900 md:text-5xl lg:text-6xl">
+				<div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+					<img src="https://i.ibb.co/Zmjj9gh/android-chrome-192x192.png" alt="logo" width="100" height="100" />
+				</div>
+				<header className="text-center row mt-4 mb-8 font-sans">
+					<h1 className="mb-3 text-3xl font-light md:text-5xl lg:text-6xl">
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-primary-focus from-secondary">
 							Can I {}
 						</span>
@@ -48,21 +51,21 @@ const Search = () => {
 					</h1>
 				</header>
 
-				<div className="flex flex-row ">
+				<div className="flex flex-row justify-baseline ">
 					<form onSubmit={handleSubmit}>
 						<input
 							type="text"
-							placeholder="Enter food or ingredient"
-							className="border border-primary rounded-lg py-2 px-2"
+							placeholder="1 cup of rice or 1 slice of bread"
+							className="border bg-transparent border-orange-300  rounded p-1 w-80"
 							value={query}
 							onChange={(event) => setQuery(event.target.value)}
 						/>
-						<button type="submit" className="btn bth-md btn-aqua glass">
+						<button type="submit" className="btn mx-3 btn-sm bg-orange-600 glass">
 							Submit
 						</button>
-					</form>z
+					</form>
 				</div>
-				<div className=" mx-auto my-10">
+				<div className=" mx-auto my-5">
 					{results ? (
 						results.totalNutrients.SUGAR.quantity > 17 || results.totalNutrients.CHOCDF.quantity > 20 ? (
 							<No
@@ -82,7 +85,7 @@ const Search = () => {
 					) : null}
 					{/* {results ? <NutritionTable results={results} /> : null} */}
 				</div>
-				<div className="text-md text-center mx-auto w-1/4 ">
+				<div className="text-sm font-light text-justify mx-auto w-2/5 text-white opacity-70 ">
 					Most adults with diabetes aim for{" "}
 					<span className="text-primary font-bold">45-60 grams </span> of carbs
 					per meal and
