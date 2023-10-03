@@ -1,7 +1,7 @@
-App Descirption:
-CanIEatThis is an application I created for my father who like most first-generation immigrants has trouble determining what snackes or foods to eat based on their nutirional values . This app is aimed to provide a simple yes/no answer and provides the nutritional values if the user wants it. 
+## App Descirption:
+I created a straightforward snack decision-making app for my father and other non-native English speaking diabetics facing dietary challenges. Users enter a snack, fruit, or other food item, and the app, leveraging the Edman Food Nutrition Database, computes glucose levels and estimates the glycemic index. Based on these calculations, it provides a clear 'yes' or 'no', assisting in making educated dietary decisions. Initially constructed with Python and Flask, this app was later redeveloped using the MERN stack.
 
-TO DO:
-ReadMe
-Glycemic Index
-Media
+## TO DO:
+- Improve Glycemic Index Calculations
+- Media
+- Recommendations
