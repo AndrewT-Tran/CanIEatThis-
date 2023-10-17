@@ -4,7 +4,7 @@ import "animate.css";
 
 const No = ({ sugars, carbs, calories, inputQuery }) => {
 	const [showDetails, setShowDetails] = useState(false);
-	const [results, setResults] = useState(null);
+	const [results, setResults] = useState(false);
 	const [finalQuery, setFinalQuery] = useState(inputQuery); // Finalized query for fetching
 
 	useEffect(() => {
@@ -25,11 +25,13 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 			}
 			fetchNutritionData();
 		}
-	}, [showDetails, finalQuery]);
+	}
+	, [showDetails, finalQuery, results]);
 
 	const onSearchAgain = () => {
 		window.location.reload();
 	};
+
 
 	if (sugars > 20 || carbs > 20) {
 		return (
@@ -65,11 +67,11 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 										className="text-white btn glass bg-red-600 bg-opacity-70 font-sans ">
 										Search Again
 									</button>
-									{/* <button
+									<button
 										onClick={() => setShowDetails(true)}
 										className="text-black btn glass bg-orange-300 bg-opacity-70 font-sans ml-2">
 										Show Details
-									</button> */}
+									</button>
 
 									{showDetails && results ? (
 										<NutritionTable results={results} />
