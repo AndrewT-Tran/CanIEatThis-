@@ -62,7 +62,7 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 											onSearchAgain();
 										}}
 										className="text-white btn glass bg-danger bg-opacity-70 font-sans ">
-										Search Again
+										<a href="/">Search Again</a>
 									</button>
 
 

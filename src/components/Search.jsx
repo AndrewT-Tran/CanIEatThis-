@@ -47,7 +47,7 @@ const Search = () => {
 						className="animate__animated animate__bounceInLeft"
 					/>
 				</div>
-				<header className="text-center mt-4 mb-8 font-sans text-2xl sm:text-2xl md:text-3xl lg:text-4xl">
+				<header className="text-center mt-4 mb-8 font-sans text-4xl sm:text-3xl md:text-3xl lg:text-4xl">
 					<h1 className="mb-3 mx-2 text-3xl font-light sm:text-3xl md:text-4xl lg:text-6xl">
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-primary-focus from-secondary">
 							Can I {}
