@@ -38,21 +38,21 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 					<div className="flex justify-center items-center">
 						<div className="card w-96 md:w-1/2 bg-red-700 bg-opacity-50 text-white">
 							<div className="card-body">
-								<h1 className="animate__animated animate__bounceInRight text-4xl md:text-3xl text-center font-bold text-rose-400 my-2">
+								<h1 className="animate__animated animate__bounceInRight text-5xl md:text-4xl text-center font-semibold text-rose-200 my-2">
 									NO!
 								</h1>
 
 								<p className="text-center font-sans text-xl emphasis">
-									<span className="font-semibold uppercase text-neutral-950">
+									<span className="font-semibold uppercase text-red-500">
 										{inputQuery}
 									</span>
 									{""} has{" "}
-									<span className="font-bold text-rose-400">{sugars.toFixed(2)} </span>
+									<span className="font-bold text-rose-300">{sugars.toFixed(2)} </span>
 									grams of sugar , {""}
-									<span className="font-bold text-rose-400">{carbs.toFixed(2)} </span> grams
+									<span className="font-bold text-rose-300">{carbs.toFixed(2)} </span> grams
 									of carbohydrates, and{" "}
-									<span className="font-bold text-rose-400">
-										{calories.toFixed(0)} calories{" "}
+									<span className="font-bold text-rose-300">
+										{calories.toFixed(0)} calories {" "}
 									</span>
 									which is greater than the daily recommended value{" "}
 								</p>
@@ -62,7 +62,7 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 										onClick={() => {
 											onSearchAgain();
 										}}
-										className="text-white btn glass bg-danger bg-opacity-70 font-sans ">
+										className="text-white btn glass bg-red-600 bg-opacity-70 font-sans ">
 										Search Again
 									</button>
 									{/* <button

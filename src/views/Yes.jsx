@@ -38,7 +38,7 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 					<div className="flex justify-center items-center">
 					<div className="card w-96 md:w-1/2 bg-success bg-opacity-50 text-slate-200">
 						<div className="card-body">
-							<h1 className="animate__animated animate__tada text-4xl text-center font-bold text-emerald-950">
+							<h1 className="animate__animated animate__tada text-5xl text-center font-semibold text-emerald-950">
 								Yes!
 							</h1>
 
