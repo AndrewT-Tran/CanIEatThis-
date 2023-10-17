@@ -15,6 +15,7 @@ const Search = () => {
 		event.preventDefault();
 		setFinalQuery(query);
 		fetchData(query);
+		console.log(results)
 	};
 
 	const fetchData = (queryToUse) => {
@@ -31,7 +32,7 @@ const Search = () => {
 			})
 			.catch((error) => {
 				console.error(error);
-				setError("An error occurred. Please try again later.");
+				setError("An error occurred fetching data. Please try again later.");
 			});
 	};
 
