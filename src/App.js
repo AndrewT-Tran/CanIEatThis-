@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import "animate.css";
-import Main from "./views/Main";
 import Yes from "./views/Yes";
 import No from "./views/No";
 import { Routes ,Route } from "react-router-dom";
+import Search from "./components/Search";
 
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
 		<div>
 		
 			<Routes>
-				<Route path="/" element={<Main />} />
+				<Route path="/" element={<Search />} />
 				<Route path="/yes" element={<Yes />} />
 				<Route path="/no" element={<No />} />
 			</Routes>

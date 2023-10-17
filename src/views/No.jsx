@@ -13,9 +13,9 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 
 	useEffect(() => {
 		if (showDetails) {
+			const app_id = "c01e2d6f";
+		const app_key = "f5ef2794e70ef81b4ef13e618f574cf2";
 			async function fetchNutritionData() {
-				const app_id = process.env.REACT_APP_APP_ID;
-				const app_key = process.env.REACT_APP_APP_KEY;
 				const nutrition_type = "logging";
 				const response = await fetch(
 					`https://api.edamam.com/api/nutrition-data?app_id=${app_id}&app_key=${app_key}&nutrition-type=${nutrition_type}&ingr=${finalQuery}`
