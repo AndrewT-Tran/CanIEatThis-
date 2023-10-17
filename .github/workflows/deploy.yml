@@ -41,6 +41,4 @@ jobs:
           project: "kind-dog-83"
           entrypoint: "https://deno.land/std@0.188.0/http/file_server.ts" # 📝 Update the entrypoint if necessary
           root: "build" # 📝 Update the root if necessary
-          env: |
-            APP_ID=${{ env.APP_ID }}
-            APP_KEY=${{ env.APP_KEY }}
+   
