@@ -26,3 +26,16 @@ code {
   --animate-duration: 1s;
   --animate-delay: 0.9s;
 }
+ @media (max-width: 768px) {
+   .text-2xl {
+     font-size: 1.5rem;
+   }
+
+   .text-4xl {
+     font-size: 2rem;
+   }
+
+   .sm:text-sm {
+     font-size: 0.7rem;
+   }
+ }

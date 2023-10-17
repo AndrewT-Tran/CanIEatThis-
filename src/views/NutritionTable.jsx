@@ -5,54 +5,58 @@ const NutritionTable = ({ results }) => {
 		{
 			name: "Calories",
 			unit: "kcal",
-			quantity: results?.totalNutrients?.ENERC_KCAL?.quantity,
+			quantity: results?.totalNutrients?.ENERC_KCAL?.quantity
 		},
 		{
 			name: "Fat",
 			unit: "g",
-			quantity: results?.totalNutrients?.FAT?.quantity,
+			quantity: results?.totalNutrients?.FAT?.quantity
 		},
 		{
 			name: "Carbs",
 			unit: "g",
-			quantity: results?.totalNutrients?.CHOCDF?.quantity,
+			quantity: results?.totalNutrients?.CHOCDF?.quantity
 		},
 		{
 			name: "Protein",
 			unit: "g",
-			quantity: results?.totalNutrients?.PROCNT?.quantity,
+			quantity: results?.totalNutrients?.PROCNT?.quantity
 		},
 		{
 			name: "Sugar",
 			unit: "g",
-			quantity: results?.totalNutrients?.SUGAR?.quantity,
+			quantity: results?.totalNutrients?.SUGAR?.quantity
 		},
 		{
 			name: "Cholesterol",
 			unit: "mg",
-			quantity: results?.totalNutrients?.CHOLE?.quantity,
+			quantity: results?.totalNutrients?.CHOLE?.quantity
 		},
 		{
 			name: "Saturated Fat",
 			unit: "g",
-			quantity: results?.totalNutrients?.FASAT?.quantity,
+			quantity: results?.totalNutrients?.FASAT?.quantity
 		},
 		{
 			name: "Trans Fat",
 			unit: "g",
-			quantity: results?.totalNutrients?.FATRN?.quantity,
-		},
+			quantity: results?.totalNutrients?.FATRN?.quantity
+		}
 	];
 
 	return (
 		<table className="table-auto table hover text-center font-sans">
-			<thead className="text-2xl text-primary-focus"></thead>
-			<tbody className="text-xl font-lighttext-secondary-focus">
+			<thead className="text-2xl text-primary-focus">
+				<tr>
+					<th>Nutrient</th>
+					<th>Quantity</th>
+					<th>Unit</th>
+				</tr>
+			</thead>
+			<tbody className="text-xl font-light text-secondary-focus">
 				{nutrients.map((nutrient) => (
 					<tr key={nutrient.name}>
-						<thead className="text-2xl text-black">
-							<td>{nutrient.name}</td>
-						</thead>
+						<td className="text-black text-2xl">{nutrient.name}</td>
 						{nutrient.quantity !== undefined ? (
 							<>
 								<td className="text-neutral-300">
