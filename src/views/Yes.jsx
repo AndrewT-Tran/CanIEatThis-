@@ -24,9 +24,9 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 				setResults(data);
 			}
 			fetchNutritionData();
+		}
 	}
-	console.log("Current value of results:", results);  // This line will log the value of results
-}, [showDetails, finalQuery, results]);
+	, [showDetails, finalQuery, results]);
 
 	const onSearchAgain = () => {
 		window.location.reload();
