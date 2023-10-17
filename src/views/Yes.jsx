@@ -43,14 +43,14 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 							</h1>
 
 							<p className="text-center font-sans text-xl emphasis">
-								<span className="font-semibold uppercase text-neutral-950">
+								<span className="font-semibold uppercase text-emerald-500">
 									{inputQuery}
 								</span>
-								{''} has <span className="font-bold text-emerald-300">{sugars.toFixed(2)} </span>
+								{''} has <span className="font-bold text-emerald-400">{sugars.toFixed(2)} </span>
 								grams of sugar,{" "}
-								<span className="font-bold text-xl text-emerald-300">{carbs.toFixed(2)} </span> grams of
+								<span className="font-bold text-xl text-emerald-400">{carbs.toFixed(2)} </span> grams of
 								carbohydrates, and{" "}
-								<span className="font-bold text-emerald-300">
+								<span className="font-bold text-emerald-400">
 									{calories.toFixed(0)} calories{" "}
 								</span>
 								which is within than the daily recommended value{" "}
