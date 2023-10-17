@@ -1,7 +1,7 @@
 name: Deploy
 on:
   push:
-    branches: main
+    branches: Origin/main
   pull_request:
     branches: main
 
