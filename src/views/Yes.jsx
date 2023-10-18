@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import NutritionTable from "./NutritionTable";
 import "animate.css";
 
-
 const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 	const [showDetails, setShowDetails] = useState(false);
 	const [results, setResults] = useState(false);
@@ -15,8 +14,8 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 	useEffect(() => {
 		if (showDetails) {
 			async function fetchNutritionData() {
-				const app_id = "c01e2d6f";
-		const app_key = "f5ef2794e70ef81b4ef13e618f574cf2";
+				const app_id = "302828c2";
+				const app_key = "566b39ae80deb1e7425cc0fa9345e9bf";
 				const nutrition_type = "logging";
 				const response = await fetch(
 					`https://api.edamam.com/api/nutrition-data?app_id=${app_id}&app_key=${app_key}&nutrition-type=${nutrition_type}&ingr=${finalQuery}`
@@ -26,8 +25,7 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 			}
 			fetchNutritionData();
 		}
-	}
-	, [showDetails, finalQuery, results]);
+	}, [showDetails, finalQuery, results]);
 
 	const onSearchAgain = () => {
 		window.location.reload();
@@ -48,10 +46,15 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 									<span className="font-semibold uppercase text-emerald-500">
 										{inputQuery}
 									</span>
-									{''} has <span className="font-bold text-emerald-400">{sugars.toFixed(2)} </span>
+									{""} has{" "}
+									<span className="font-bold text-emerald-400">
+										{sugars.toFixed(2)}{" "}
+									</span>
 									grams of sugar,{" "}
-									<span className="font-bold text-xl text-emerald-400">{carbs.toFixed(2)} </span> grams of
-									carbohydrates, and{" "}
+									<span className="font-bold text-xl text-emerald-400">
+										{carbs.toFixed(2)}{" "}
+									</span>{" "}
+									grams of carbohydrates, and{" "}
 									<span className="font-bold text-emerald-400">
 										{calories.toFixed(0)} calories{" "}
 									</span>
@@ -66,7 +69,6 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 										<a href="/">Search Again</a>
 									</button>
 
-
 									<button
 										onClick={() => setShowDetails(true)}
 										className="text-black btn glass bg-orange-300 bg-opacity-70 font-sans ml-2">
@@ -76,7 +78,6 @@ const Yes = ({ sugars, carbs, calories, inputQuery }) => {
 									{showDetails && results ? (
 										<NutritionTable results={results} />
 									) : null}
-
 								</div>
 							</div>
 						</div>

@@ -15,13 +15,12 @@ const Search = () => {
 		event.preventDefault();
 		setFinalQuery(query);
 		fetchData(query);
-		console.log(results)
+		console.log(results);
 	};
 
 	const fetchData = (queryToUse) => {
-		require('dotenv').config();
-		const app_id = "c01e2d6f";
-		const app_key = "f5ef2794e70ef81b4ef13e618f574cf2";
+		const app_id = "302828c2";
+		const app_key = "566b39ae80deb1e7425cc0fa9345e9bf";
 		const nutrition_type = "logging";
 		axios
 			.get(
@@ -52,10 +51,10 @@ const Search = () => {
 				<header className="text-center mt-4 mb-8 font-sans text-4xl sm:text-3xl md:text-3xl lg:text-4xl">
 					<h1 className="mb-3 mx-2 text-3xl font-light sm:text-3xl md:text-4xl lg:text-6xl">
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-primary-focus from-secondary">
-							Can I { }
+							Can I {}
 						</span>
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-accent from-primary-focus">
-							Eat This ? { }
+							Eat This ? {}
 						</span>
 					</h1>
 				</header>
@@ -90,7 +89,7 @@ const Search = () => {
 					{results ? (
 						<div className="flex justify-center items-center">
 							{results.totalNutrients.SUGAR.quantity > 17 ||
-								results.totalNutrients.CHOCDF.quantity > 20 ? (
+							results.totalNutrients.CHOCDF.quantity > 20 ? (
 								<No
 									sugars={results.totalNutrients.SUGAR.quantity}
 									calories={results.calories}
