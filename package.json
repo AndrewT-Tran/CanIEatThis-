@@ -41,11 +41,8 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-      
     ]
   },
-  "proxy": "https://api.edamam.com"
-  ,
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "keywords": [],
@@ -53,7 +50,6 @@
   "license": "ISC",
   "devDependencies": {
     "daisyui": "^3.9.3",
-    "dotenv": "^16.3.1",
     "tailwindcss": "^3.3.3"
   }
 }
