@@ -62,17 +62,17 @@ const Search = () => {
 				<div className="flex flex-col md:flex-row justify-center items-center w-3/4">
 					<form
 						onSubmit={handleSubmit}
-						className="w-full md:w-auto text-center">
+						className="w-full h-min md:w-auto text-center">
 						<input
 							type="text"
 							placeholder="1 cup of rice or 1 slice of bread"
-							className="border bg-transparent border-orange-300 rounded p-1 w-full md:w-80"
+							className="border bg-transparent border-orange-300 rounded p-2 w-full md:w-80"
 							value={query}
 							onChange={(event) => setQuery(event.target.value)}
 						/>
 						<button
 							type="submit"
-							className="btn my-3 mx-3 btn-sm bg-orange-600 w-3/4 md:w-auto text-center md:text-base"
+							className="btn my-3 mx-2 btn-sm bg-orange-600 w-3/4 md:w-auto text-center md:text-base"
 							style={{ fontSize: "0.8rem" }}>
 							Submit
 						</button>
