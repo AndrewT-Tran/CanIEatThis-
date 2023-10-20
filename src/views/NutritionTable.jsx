@@ -15,7 +15,7 @@ const NutritionTable = ({ results }) => {
 		{
 			name: "Carbs",
 			unit: "g",
-			quantity: results?.totalNutrients?.CHOCDF?.quantity
+			quantity: results?.totalNutrients?.CHOCDF?.quantityw
 		},
 		{
 			name: "Protein",
