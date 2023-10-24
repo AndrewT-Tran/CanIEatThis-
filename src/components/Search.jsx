@@ -48,8 +48,8 @@ const Search = () => {
 						className="animate__animated animate__bounceInLeft"
 					/>
 				</div>
-				<header className="text-center mt-4 mb-8 font-sans text-4xl sm:text-3xl md:text-3xl lg:text-4xl">
-					<h1 className="mb-3 mx-2 text-3xl font-light sm:text-3xl md:text-4xl lg:text-6xl">
+				<header className="text-center mt-4 mb-8 font-sans text-4xl sm:text-5xl md:text-4xl lg:text-4xl">
+					<h1 className="mb-3 mx-2 text-3xl font-sans sm:text-4xl md:text-4xl lg:text-6xl">
 						<span className="text-transparent bg-clip-text bg-gradient-to-r to-primary-focus from-secondary">
 							Can I {}
 						</span>
@@ -108,7 +108,7 @@ const Search = () => {
 					) : null}
 				</div>
 				<div className="text-sm font-light text-justify mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-white p-4">
-					Most adults with diabetes aim for{" "}
+					Most adults with diabetes should aim for {" "}
 					<span className="text-primary font-bold">45-60 grams </span> of carbs
 					per meal and{" "}
 					<span className="text-secondary font-bold">
