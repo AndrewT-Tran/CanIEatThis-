@@ -13,8 +13,8 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 
 	useEffect(() => {
 		if (showDetails) {
-			const app_id = "c01e2d6f";
-		const app_key = "f5ef2794e70ef81b4ef13e618f574cf2";
+			const app_id = "302828c2";
+			const app_key = "566b39ae80deb1e7425cc0fa9345e9bf";
 			async function fetchNutritionData() {
 				const nutrition_type = "logging";
 				const response = await fetch(
@@ -25,13 +25,11 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 			}
 			fetchNutritionData();
 		}
-	}
-	, [showDetails, finalQuery, results]);
+	}, [showDetails, finalQuery, results]);
 
 	const onSearchAgain = () => {
 		window.location.reload();
 	};
-
 
 	if (sugars > 20 || carbs > 20) {
 		return (
@@ -49,12 +47,16 @@ const No = ({ sugars, carbs, calories, inputQuery }) => {
 										{inputQuery}
 									</span>
 									{""} has{" "}
-									<span className="font-bold text-rose-300">{sugars.toFixed(2)} </span>
-									grams of sugar , {""}
-									<span className="font-bold text-rose-300">{carbs.toFixed(2)} </span> grams
-									of carbohydrates, and{" "}
 									<span className="font-bold text-rose-300">
-										{calories.toFixed(0)} calories {" "}
+										{sugars.toFixed(2)}{" "}
+									</span>
+									grams of sugar , {""}
+									<span className="font-bold text-rose-300">
+										{carbs.toFixed(2)}{" "}
+									</span>{" "}
+									grams of carbohydrates, and{" "}
+									<span className="font-bold text-rose-300">
+										{calories.toFixed(0)} calories{" "}
 									</span>
 									which is greater than the daily recommended value{" "}
 								</p>
