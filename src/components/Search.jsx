@@ -58,7 +58,6 @@ const Search = () => {
 						</span>
 					</h1>
 				</header>
-
 				<div className="flex flex-col md:flex-row justify-center items-center w-3/4">
 					<form
 						onSubmit={handleSubmit}
@@ -66,7 +65,7 @@ const Search = () => {
 						<input
 							type="text"
 							placeholder="1 cup of rice or 1 slice of bread"
-							className="border bg-transparent border-orange-300 rounded p-2 w-full md:w-80"
+							className="input input-bordered max-w-xs border border-secondary rounded p-2 w-full md:w-80"
 							value={query}
 							onChange={(event) => setQuery(event.target.value)}
 						/>
