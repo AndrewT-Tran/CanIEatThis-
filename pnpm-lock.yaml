@@ -15,7 +15,7 @@ dependencies:
     specifier: ^13.5.0
     version: 13.5.0(@testing-library/dom@9.3.3)
   '@types/react-transition-group':
-    specifier: ^4.4.8
+    specifier: ^4.4.6
     version: 4.4.8
   animate.css:
     specifier: ^4.1.1
@@ -33,7 +33,7 @@ dependencies:
     specifier: ^4.18.2
     version: 4.18.2
   mongoose:
-    specifier: ^7.6.4
+    specifier: ^7.4.1
     version: 7.6.4
   react:
     specifier: ^18.2.0
@@ -42,7 +42,7 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   react-router-dom:
-    specifier: ^6.18.0
+    specifier: ^6.14.2
     version: 6.18.0(react-dom@18.2.0)(react@18.2.0)
   react-scripts:
     specifier: ^5.0.1
@@ -53,10 +53,10 @@ dependencies:
 
 devDependencies:
   daisyui:
-    specifier: ^3.9.4
+    specifier: ^3.9.3
     version: 3.9.4
   tailwindcss:
-    specifier: ^3.3.5
+    specifier: ^3.3.3
     version: 3.3.5
 
 packages:
