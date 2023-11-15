@@ -39,5 +39,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "canieatthis"
-          entrypoint: "index.js" # 📝 Update the entrypoint if necessary
+          entrypoint: "app.js" # 📝 Update the entrypoint if necessary
           root: "build" # 📝 Update the root if necessary
